@@ -1,0 +1,27 @@
+{
+  "name": "legacyke-techmate",
+  "version": "1.0.0",
+  "description": "One-point sales platform for electronics and high-end phones",
+  "main": "index.js",
+  "scripts": {
+    "install-all": "npm install && cd frontend && npm install && cd ../backend && npm install",
+    "dev": "concurrently \"cd backend && npm run dev\" \"cd frontend && npm start\"",
+    "build": "cd backend && npm run build && cd ../frontend && npm run build",
+    "start": "npm run build && npm run start:prod",
+    "docker:build": "docker-compose build",
+    "docker:up": "docker-compose up -d",
+    "docker:down": "docker-compose down",
+    "docker:logs": "docker-compose logs -f"
+  },
+  "keywords": [
+    "ecommerce",
+    "electronics",
+    "phones",
+    "sales-platform"
+  ],
+  "author": "LEGACYKE Technologies",
+  "license": "MIT",
+  "devDependencies": {
+    "concurrently": "^8.2.0"
+  }
+}
